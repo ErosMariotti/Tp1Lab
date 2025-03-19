@@ -1,7 +1,7 @@
-package Servicios;
+package com.eros.tp1_1lab.Servicios;
 
-import Repositorios.EmpresaRepository;
-import com.eros.tp1_1lab.Empresa;
+import com.eros.tp1_1lab.Repositorios.EmpresaRepository;
+import com.eros.tp1_1lab.Modelos.Empresa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
