@@ -1,7 +1,7 @@
-package Controladores;
+package com.eros.tp1_1lab.Controladores;
 
-import Servicios.NoticiaService;
-import com.eros.tp1_1lab.Noticia;
+import com.eros.tp1_1lab.Modelos.Noticia;
+import com.eros.tp1_1lab.Servicios.NoticiaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/noticia")
+@CrossOrigin(origins = "*")
 public class NoticiaController {
     @Autowired
     private NoticiaService noticiaService;
@@ -39,13 +40,24 @@ public class NoticiaController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/listar")
-    public List<Noticia> listar() {
-        return noticiaService.findAll();
+    @GetMapping("/listar/{id}")
+    public List<Noticia> listarPorEmpresa(@PathVariable Long id) {
+        return noticiaService.findByEmpresaId(id);
     }
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         noticiaService.delete(id);
     }
+
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<Noticia> actualizar(@PathVariable Long id, @RequestBody Noticia noticiaDetails) {
+        try {
+            Noticia updatedNoticia = noticiaService.update(id, noticiaDetails);
+            return ResponseEntity.ok(updatedNoticia);
+        } catch (RuntimeException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
+

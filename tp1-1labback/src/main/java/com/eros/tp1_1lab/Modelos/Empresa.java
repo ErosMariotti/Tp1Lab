@@ -1,4 +1,4 @@
-package com.eros.tp1_1lab;
+package com.eros.tp1_1lab.Modelos;
 
 import jakarta.persistence.*;
 import lombok.Getter;

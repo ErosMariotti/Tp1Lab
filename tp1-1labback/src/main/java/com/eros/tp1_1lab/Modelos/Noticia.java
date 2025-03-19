@@ -1,5 +1,6 @@
-package com.eros.tp1_1lab;
+package com.eros.tp1_1lab.Modelos;
 
+import com.eros.tp1_1lab.Modelos.Empresa;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

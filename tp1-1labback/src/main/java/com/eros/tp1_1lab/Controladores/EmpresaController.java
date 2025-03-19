@@ -1,7 +1,7 @@
-package Controladores;
+package com.eros.tp1_1lab.Controladores;
 
-import Servicios.EmpresaService;
-import com.eros.tp1_1lab.Empresa;
+import com.eros.tp1_1lab.Modelos.Empresa;
+import com.eros.tp1_1lab.Servicios.EmpresaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/empresa")
+@CrossOrigin(origins = "*")
 public class EmpresaController {
     @Autowired
     private EmpresaService empresaService;
