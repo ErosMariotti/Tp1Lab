@@ -24,13 +24,27 @@ public class NoticiaService {
 
     public Noticia update(Long id, Noticia noticiaActualizada) {
         return noticiaRepository.findById(id).map(noticia -> {
-            noticia.setTitulo(noticiaActualizada.getTitulo());
-            noticia.setResumen(noticiaActualizada.getResumen());
-            noticia.setImagen(noticiaActualizada.getImagen());
-            noticia.setContenidoHtml(noticiaActualizada.getContenidoHtml());
-            noticia.setPublicada(noticiaActualizada.getPublicada());
-            noticia.setFechaPublicacion(noticiaActualizada.getFechaPublicacion());
-            noticia.setEmpresa(noticiaActualizada.getEmpresa());
+            if (noticiaActualizada.getTitulo() != null) {
+                noticia.setTitulo(noticiaActualizada.getTitulo());
+            }
+            if (noticiaActualizada.getResumen() != null) {
+                noticia.setResumen(noticiaActualizada.getResumen());
+            }
+            if (noticiaActualizada.getImagen() != null) {
+                noticia.setImagen(noticiaActualizada.getImagen());
+            }
+            if (noticiaActualizada.getContenidoHtml() != null) {
+                noticia.setContenidoHtml(noticiaActualizada.getContenidoHtml());
+            }
+            if (noticiaActualizada.getPublicada() != '\0') {
+                noticia.setPublicada(noticiaActualizada.getPublicada());
+            }
+            if (noticiaActualizada.getFechaPublicacion() != null) {
+                noticia.setFechaPublicacion(noticiaActualizada.getFechaPublicacion());
+            }
+            if (noticiaActualizada.getEmpresa() != null) {
+                noticia.setEmpresa(noticiaActualizada.getEmpresa());
+            }
             return noticiaRepository.save(noticia);
         }).orElseThrow(() -> new RuntimeException("Noticia no encontrada"));
     }
