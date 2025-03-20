@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/noticia")
 @CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class NoticiaController {
     @Autowired
     private NoticiaService noticiaService;
@@ -42,6 +43,7 @@ public class NoticiaController {
 
     @GetMapping("/listar/{id}")
     public List<Noticia> listarPorEmpresa(@PathVariable Long id) {
+        System.out.println("ID recibido en la API: " + id);
         return noticiaService.findByEmpresaId(id);
     }
 
@@ -53,6 +55,7 @@ public class NoticiaController {
     @PutMapping("/actualizar/{id}")
     public ResponseEntity<Noticia> actualizar(@PathVariable Long id, @RequestBody Noticia noticiaDetails) {
         try {
+            System.out.println("ID recibido en la API: " + id);
             Noticia updatedNoticia = noticiaService.update(id, noticiaDetails);
             return ResponseEntity.ok(updatedNoticia);
         } catch (RuntimeException e) {
