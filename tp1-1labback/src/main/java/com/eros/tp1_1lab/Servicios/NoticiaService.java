@@ -3,6 +3,9 @@ package com.eros.tp1_1lab.Servicios;
 import com.eros.tp1_1lab.Repositorios.NoticiaRepository;
 import com.eros.tp1_1lab.Modelos.Noticia;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,5 +50,11 @@ public class NoticiaService {
             }
             return noticiaRepository.save(noticia);
         }).orElseThrow(() -> new RuntimeException("Noticia no encontrada"));
+    }
+
+    public Page<Noticia> buscarNoticiasPorEmpresa(Long empresaId, String texto, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return noticiaRepository.findByEmpresaIdAndTituloContainingOrEmpresaIdAndResumenContainingOrderByFechaPublicacionDesc(
+                empresaId, texto, empresaId, texto, pageable);
     }
 }

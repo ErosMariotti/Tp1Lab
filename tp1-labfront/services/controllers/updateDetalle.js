@@ -20,7 +20,7 @@ async function obtenerDetalleNoticia(id) {
 function actualizarDetalleNoticia(noticia) {
   document.querySelector(
     '#imagenPrincipal'
-  ).style.backgroundImage = `url('http://localhost:82/template_html/images/${noticia.imagen}')`;
+  ).style.backgroundImage = `url('${noticia.imagen}')`;
   document.querySelector('#imagenPrincipal div').textContent = noticia.titulo;
   document.querySelector('h2').textContent = noticia.titulo;
   document.querySelector('body').innerHTML = document

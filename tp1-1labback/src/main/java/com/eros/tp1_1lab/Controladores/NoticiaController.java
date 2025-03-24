@@ -3,6 +3,7 @@ package com.eros.tp1_1lab.Controladores;
 import com.eros.tp1_1lab.Modelos.Noticia;
 import com.eros.tp1_1lab.Servicios.NoticiaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -13,7 +14,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/noticia")
 @CrossOrigin(origins = "*")
-//@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class NoticiaController {
     @Autowired
     private NoticiaService noticiaService;
@@ -62,5 +62,23 @@ public class NoticiaController {
             return ResponseEntity.notFound().build();
         }
     }
-}
 
+//    @GetMapping("/buscar")
+//    public ResponseEntity<Page<Noticia>> buscarNoticias(
+//            @RequestParam(defaultValue = "") String texto,
+//            @RequestParam(defaultValue = "0") int page,
+//            @RequestParam(defaultValue = "20") int size) {
+//        Page<Noticia> noticias = noticiaService.buscarNoticias(texto, page, size);
+//        return ResponseEntity.ok(noticias);
+//    }
+
+    @GetMapping("/buscarPorEmpresa")
+    public ResponseEntity<Page<Noticia>> buscarNoticiasPorEmpresa(
+            @RequestParam Long empresaId,
+            @RequestParam(defaultValue = "") String texto,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size) {
+        Page<Noticia> noticias = noticiaService.buscarNoticiasPorEmpresa(empresaId, texto, page, size);
+        return ResponseEntity.ok(noticias);
+    }
+}

@@ -48,6 +48,7 @@ async function verHTML() {
     console.log('Respuesta del servidor:', data);
 
     alert('Noticia actualizada correctamente');
+    window.location.href = `http://localhost:8080/noticia/${noticiaId}`;
   } catch (error) {
     console.error('Error:', error);
     alert('Error al actualizar la noticia');
