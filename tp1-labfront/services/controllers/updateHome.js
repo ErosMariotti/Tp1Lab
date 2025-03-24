@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
   const apiUrl = 'http://localhost:8080';
-  const urlParams = new URLSearchParams(window.location.search);
-  const empresaId = urlParams.get('id');
+  const empresaId = localStorage.getItem('empresaId');
+  if (!empresaId) {
+    throw new Error('No se encontró el ID de la empresa en localStorage');
+  }
 
   if (empresaId) {
     fetch(`${apiUrl}/empresa/${empresaId}`)
       .then(response => response.json())
       .then(data => {
+        console.log('data', data)
         // document.getElementById("empresa-nombre").textContent = data.nombre;
         // document.getElementById("empresa-telefono").textContent = data.telefono;
         // document.getElementById("empresa-descripcion").textContent = data.descripcion;

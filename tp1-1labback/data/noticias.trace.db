@@ -148,3 +148,27 @@ UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? 
 org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://previews.123rf.com/images/michaeljung/michaeljung1310/michaeljung131000... (155)"
 Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://previews.123rf.com/images/michaeljung/michaeljung1310/michaeljung131000... (155)"; SQL statement:
 UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
+2025-03-24 18:31:32.217105-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://media.istockphoto.com/id/1319031310/es/foto/m%C3%A9dico-que-escribe-una... (168)"
+Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://media.istockphoto.com/id/1319031310/es/foto/m%C3%A9dico-que-escribe-una... (168)"; SQL statement:
+UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
+2025-03-24 18:31:32.221352-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://media.istockphoto.com/id/1319031310/es/foto/m%C3%A9dico-que-escribe-una... (168)"
+Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://media.istockphoto.com/id/1319031310/es/foto/m%C3%A9dico-que-escribe-una... (168)"; SQL statement:
+UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
+2025-03-24 18:31:54.668758-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://www.infobae.com/resizer/v2/BU6LO2B7XBH55EMNWEPJXWQIUE.jpg?auth=cb442de8... (179)"
+Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://www.infobae.com/resizer/v2/BU6LO2B7XBH55EMNWEPJXWQIUE.jpg?auth=cb442de8... (179)"; SQL statement:
+UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
+2025-03-24 18:31:54.668758-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://www.infobae.com/resizer/v2/BU6LO2B7XBH55EMNWEPJXWQIUE.jpg?auth=cb442de8... (179)"
+Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://www.infobae.com/resizer/v2/BU6LO2B7XBH55EMNWEPJXWQIUE.jpg?auth=cb442de8... (179)"; SQL statement:
+UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
+2025-03-24 18:32:26.413476-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://images.ecestaticos.com/ciN9hN7qsu5JOcrGdMngWhCHs8Y=/0x70:1716x1040/1200... (205)"
+Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://images.ecestaticos.com/ciN9hN7qsu5JOcrGdMngWhCHs8Y=/0x70:1716x1040/1200... (205)"; SQL statement:
+UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
+2025-03-24 18:32:26.413476-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna "IMAGEN CHARACTER VARYING(128)": "'https://images.ecestaticos.com/ciN9hN7qsu5JOcrGdMngWhCHs8Y=/0x70:1716x1040/1200... (205)"
+Value too long for column "IMAGEN CHARACTER VARYING(128)": "'https://images.ecestaticos.com/ciN9hN7qsu5JOcrGdMngWhCHs8Y=/0x70:1716x1040/1200... (205)"; SQL statement:
+UPDATE "PUBLIC"."NOTICIA" SET "ID"=? ,"CONTENIDO_HTML"=? ,"FECHA_PUBLICACION"=? ,"IMAGEN"=? ,"PUBLICADA"=? ,"RESUMEN"=? ,"TITULO"=? ,"ID_EMPRESA"=?  WHERE "ID"=? [22001-232]
